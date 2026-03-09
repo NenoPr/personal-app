@@ -1,0 +1,9 @@
+{
+  "todos": [
+    { "id": 1, "text": "Code", "completed": true },
+    { "id": 2, "text": "Study Math", "completed": false },
+    { "id": 3, "text": "Program game", "completed": false },
+    { "id": 4, "text": "Read", "completed": false }
+  ],
+  "latest_id": 5
+}
