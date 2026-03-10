@@ -1,0 +1,14 @@
+.sidebar-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.sidebar-item {
+  width: 100%;
+  text-align: left;
+}
+
+.sidebar-item.is-active {
+  border-color: blue;
+}

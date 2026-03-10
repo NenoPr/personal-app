@@ -5,10 +5,18 @@
   border: 0.3rem solid black;
   border-radius: 0.2rem;
   padding: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.499);
 }
 
-.add-todo:hover {
-  cursor: pointer;
+input {
+  padding: 0.5rem;
+}
+
+.add-todo {
+  align-self: center;
+  width: fit-content;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .todo-item {
@@ -30,10 +38,11 @@
 }
 
 .todo-complete-todo {
+  padding: 0;
+  background: transparent;
   border: 0.2rem solid black;
-  height: 1rem;
-  width: 1rem;
-  border: 0.2rem solid black;
+  height: 1.5rem;
+  width: 1.5rem;
   border-radius: 0.5rem;
   justify-self: flex-start;
 }
@@ -43,6 +52,8 @@
 }
 
 .todo-item-delete {
+  padding: 0.1rem 0.4rem;
+  background: transparent;
   border: 0.1rem solid black;
   border-radius: 0.25rem;
   margin-left: auto;
@@ -53,4 +64,10 @@
   outline: 1rem black;
   border: 0.1rem solid red;
   color: red;
+}
+
+.todo-complete-todo,
+.todo-item-delete,
+.add-todo {
+  cursor: pointer;
 }

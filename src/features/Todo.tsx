@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import "../index.css";
 import "../App.css";
 import "../css/todo.css";
 import todos from "../json/todos.json";
@@ -62,40 +63,40 @@ function Todo() {
         {tasks
           .filter((item) => !item.completed)
           .map((item) => (
-            <>
-              <div className="todo-item" key={item.id}>
-                <div
-                  className="todo-complete-todo"
-                  onClick={() => completeTodo(item.id)}
-                ></div>
-                <div className="todo-item-text">{item.text}</div>
+            <div className="todo-item" key={item.id}>
+              <button
+                type="button"
+                className="todo-complete-todo"
+                onClick={() => completeTodo(item.id)}
+                aria-label={`Mark "${item.text}" as complete`}
+              ></button>
+              <div className="todo-item-text">{item.text}</div>
 
-                <div
-                  className="todo-item-delete"
-                  onClick={() => deleteTask(item.id)}
-                >
-                  Delete
-                </div>
-              </div>
-            </>
+              <button
+                type="button"
+                className="todo-item-delete"
+                onClick={() => deleteTask(item.id)}
+              >
+                Delete
+              </button>
+            </div>
           ))}
         <div>Completed Tasks</div>
         <span className="line"></span>
         {tasks
           .filter((item) => item.completed)
           .map((item) => (
-            <>
-              <div className="todo-item" key={item.id}>
-                <div className="todo-item-text">{item.text}</div>
+            <div className="todo-item" key={item.id}>
+              <div className="todo-item-text">{item.text}</div>
 
-                <div
-                  className="todo-item-delete"
-                  onClick={() => deleteTask(item.id)}
-                >
-                  Delete
-                </div>
-              </div>
-            </>
+              <button
+                type="button"
+                className="todo-item-delete"
+                onClick={() => deleteTask(item.id)}
+              >
+                Delete
+              </button>
+            </div>
           ))}
       </div>
     </>
